@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-heading: var(--font-serif);
+  --font-sans: "DM Sans", sans-serif;
+  --font-serif: "Fraunces", serif;
+  --font-mono: "DM Mono", monospace;
+
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --color-ring: var(--ring);
+  --color-border: var(--border);
+
+  --color-neutral-900: var(--neutral-900);
+  --color-neutral-800: var(--neutral-800);
+  --color-neutral-700: var(--neutral-700);
+  --color-neutral-600: var(--neutral-600);
+  --color-neutral-400: var(--neutral-400);
+  --color-neutral-200: var(--neutral-200);
+  --color-neutral-100: var(--neutral-100);
+  --color-neutral-50: var(--neutral-50);
+  --color-neutral-0: var(--neutral-0);
+  --color-sun-500: var(--sun-500);
+  --color-sun-300: var(--sun-300);
+  --color-sun-200: var(--sun-200);
+  --color-sun-50: var(--sun-50);
+  --color-terracotta-700: var(--terracotta-700);
+  --color-terracotta-600: var(--terracotta-600);
+  --color-terracotta-500: var(--terracotta-500);
+  --color-terracotta-400: var(--terracotta-400);
+  --color-blue-500: var(--blue-500);
+  --color-rose-500: var(--rose-500);
+
+  /* Theme-aware receive-amount text */
+
+  --text-caption: 0.625rem;/* 10px */
+  --text-xs: 0.75rem;     /* 12px */
+  --text-sm: 0.875rem;    /* 14px */
+  --text-base: 1rem;      /* 16px */
+  --text-lg: 1.125rem;    /* 18px */
+  --text-xl: 1.25rem;     /* 20px */
+  --text-2xl: 1.5rem;     /* 24px */
+  --text-3xl: 1.75rem;    /* 28px */
+  --text-4xl: 2rem;       /* 32px */
+  --text-5xl: 2.5rem;     /* 40px */
+
+  --radius-sm: calc(var(--radius) * 0.5);    /* 4px */
+  --radius-md: calc(var(--radius) * 0.75);   /* 6px */
+  --radius-lg: var(--radius);                /* 8px */
+  --radius-xl: calc(var(--radius) * 1.25);   /* 10px */
+  --radius-2xl: calc(var(--radius) * 1.5);   /* 12px */
+  --radius-3xl: calc(var(--radius) * 2);     /* 16px */
+  --radius-4xl: calc(var(--radius) * 2.5);   /* 20px */
+  --radius-5xl: calc(var(--radius) * 3);     /* 24px */
+}
+
+/* ── Light mode (default) ─────────────────────────────── */
+:root {
+  /* Neutral */
+  --neutral-900: hsl(33, 15%, 15%);
+  --neutral-800: hsl(33, 22%, 20%);
+  --neutral-700: hsl(32, 20%, 29%);
+  --neutral-600: hsl(33, 17%, 41%);
+  --neutral-400: hsl(36, 22%, 86%);
+  --neutral-200: hsl(30, 24%, 93%);
+  --neutral-100: hsl(35, 60%, 96%);
+  --neutral-50: hsl(40, 60%, 98%);
+  --neutral-0:  hsl(0, 0%, 100%);
+
+  /* Sun */
+  --sun-500: hsl(42, 83%, 58%);
+  --sun-300: hsl(44, 84%, 75%);
+  --sun-200: hsl(45, 100%, 74%);
+  --sun-50: hsl(41, 100%, 93%);
+
+  /* Terracotta */
+  --terracotta-700: hsl(15, 69%, 37%);
+  --terracotta-600: hsl(15, 74%, 41%);
+  --terracotta-500: hsl(18, 62%, 47%);
+  --terracotta-400: hsl(22, 72%, 56%);
+
+  /* Blue */
+  --blue-500: hsl(230, 49%, 56%);
+
+  /* Rose */
+  --rose-500: hsl(340, 48%, 52%);
+
+  --background: var(--sun-50);
+  --foreground: var(--sun-500);
+  --border: var(--neutral-400);
+  --ring: var(--neutral-400);
+  --radius: 8px;
+
+  font-size: 14px;
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Dark mode ────────────────────────────────────────── */
+.dark {
+  /* Neutral */
+  --neutral-900: hsl(40, 60%, 98%);
+  --neutral-800: hsl(35, 60%, 96%);
+  --neutral-700: hsl(30, 24%, 93%);
+  --neutral-600: hsl(36, 22%, 86%);
+  --neutral-400: hsl(33, 17%, 41%);
+  --neutral-200: hsl(32, 20%, 29%);
+  --neutral-100: hsl(33, 22%, 20%);
+  --neutral-50: hsl(33, 15%, 15%);
+  --neutral-0: hsl(25, 12%, 10%);
+
+  /* Sun */
+  --sun-500: hsl(44, 92%, 66%);
+  --sun-300: hsl(45, 100%, 78%);
+  --sun-200: hsl(46, 100%, 84%);
+  --sun-50: hsl(46, 100%, 18%);
+
+  /* Terracotta */
+  --terracotta-700: hsl(18, 72%, 66%);
+  --terracotta-600: hsl(18, 72%, 60%);
+  --terracotta-500: hsl(18, 62%, 54%);
+  --terracotta-400: hsl(22, 74%, 48%);
+
+  /* Blue */
+  --blue-500: hsl(230, 72%, 68%);
+
+  /* Rose */
+  --rose-500: hsl(340, 65%, 64%);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+/* @utility text-preset-1 {
+  @apply font-bold text-5xl tracking-tight;
+}
+
+@utility text-preset-1-tab {
+  @apply font-bold text-4xl tracking-tight;
+}
+
+@utility text-preset-2 {
+  @apply text-xl leading-1.5 tracking-tight;
+}
+
+@utility text-preset-3 {
+  @apply text-base leading-1.5 tracking-wide;
+}
+
+@utility text-preset-3-med {
+  @apply font-medium text-base leading-3 tracking-wider;
+}
+
+@utility text-preset-3-bold {
+  @apply font-bold text-base leading-1 tracking-wide;
+}
+
+@utility text-preset-4 {
+  @apply text-sm leading-1 tracking-wide;
+}
+
+@utility text-preset-5 {
+  @apply text-xs leading-1.5 tracking-wide;
+}
+
+@utility text-preset-med {
+  @apply font-medium text-xs leading-1.5 tracking-tight;
+}
+
+@utility text-preset-6 {
+  @apply text-caption leading-0 tracking-normal;
+}
+
+@utility button-filled {
+  @apply bg-lime-500 px-3 py-2 rounded-xl flex items-center justify-between uppercase text-preset-5 font-medium text-neutral-900;
+}
+
+@utility button-outline {
+  @apply bg-transparent border px-3 py-2 rounded-xl flex items-center justify-between uppercase text-preset-5 font-medium text-neutral-50;
+}
+
+@utility button-outline-gray {
+  @apply bg-transparent border border-neutral-400 p-3 rounded-lg flex items-center justify-between uppercase text-preset-5 font-medium text-neutral-200;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@utility animate-marquee {
+  animation: marquee 100s linear infinite;
+  will-change: transform;
+}
+
+@utility no-spinner {
+  -moz-appearance: textfield;
+  appearance: textfield;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+} */
+
+/* @layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+} */
