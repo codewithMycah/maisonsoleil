@@ -46,6 +46,7 @@
   --text-3xl: 1.75rem;    /* 28px */
   --text-4xl: 2rem;       /* 32px */
   --text-5xl: 2.5rem;     /* 40px */
+  --text-6xl: 3rem;
 
   --radius-sm: calc(var(--radius) * 0.5);    /* 4px */
   --radius-md: calc(var(--radius) * 0.75);   /* 6px */
@@ -148,6 +149,14 @@
   }
 }
 
+@utility button-filled {
+  @apply bg-neutral-900 px-3 py-2 rounded-3xl font-medium text-neutral-0 text-center;
+}
+
+@utility button-outline {
+  @apply bg-transparent border border-neutral-400 px-3 py-2 rounded-3xl font-medium text-neutral-900 text-center;
+}
+
 /* @utility text-preset-1 {
   @apply font-bold text-5xl tracking-tight;
 }
@@ -186,14 +195,6 @@
 
 @utility text-preset-6 {
   @apply text-caption leading-0 tracking-normal;
-}
-
-@utility button-filled {
-  @apply bg-lime-500 px-3 py-2 rounded-xl flex items-center justify-between uppercase text-preset-5 font-medium text-neutral-900;
-}
-
-@utility button-outline {
-  @apply bg-transparent border px-3 py-2 rounded-xl flex items-center justify-between uppercase text-preset-5 font-medium text-neutral-50;
 }
 
 @utility button-outline-gray {

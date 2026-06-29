@@ -13,8 +13,8 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ThemeProvider>
       <SkeletonTheme
-        baseColor={isDarkTheme ? "#0A0A0A" : "#E8E8E8"}
-        highlightColor={isDarkTheme ? "#575759" : "#575759"}
+        baseColor={isDarkTheme ? "#FFF3DA" : "#FFF3DA"}
+        highlightColor={isDarkTheme ? "#f5d58c" : "#f5d58c"}
         duration={2}
       >
         <App />
