@@ -35,7 +35,7 @@ const Navbar = () => {
         
       </button>
       {isOpen && (
-        <div className='md:hidden h-[calc(100dvh-96px)] absolute inset-0 mt-24 px-6 py-4 text-neutral-700'>
+        <div className='bg-background md:hidden h-[calc(100dvh-96px)] absolute inset-0 mt-24 px-6 py-4 text-neutral-700'>
           <div className='h-full flex flex-col justify-between'>
             <div className='flex flex-col items-start gap-2'>
               {tabs.map((tab, index) => (
@@ -56,7 +56,7 @@ const Navbar = () => {
           </div>
         </div>
       )}
-      <div className='hidden md:block h-[calc(100dvh-96px)] absolute inset-0 mt-24 mx-6 py-4 text-neutral-700 border-t-2'>
+      <div className='bg-background hidden md:block h-[calc(100dvh-96px)] absolute inset-0 mt-24 mx-6 py-4 text-neutral-700 border-t-2'>
         <div className='h-full flex flex-col justify-between'>
           <div className='flex flex-col items-start gap-2'>
             {tabs.map((tab, index) => ( 
