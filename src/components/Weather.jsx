@@ -103,7 +103,7 @@ const Weather = () => {
   const windLabel = getWindLabel(currentWeather.wind_speed_10m)
 
   return (
-    <div className='relative bg-sun-200 rounded-4xl p-8 flex gap-4 items-center'>
+    <div className='relative bg-sun-200 rounded-4xl p-6 flex gap-4 items-center'>
       <div className='absolute top-0 right-0'>
         <img src={conditionIcon} alt={condition} className='w-30 h-30' />
       </div>
