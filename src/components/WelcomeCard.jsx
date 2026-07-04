@@ -1,3 +1,4 @@
+import Sun from '../assets/icon-sun.svg'
 
 const WelcomeCard = () => {
 
@@ -16,8 +17,9 @@ const WelcomeCard = () => {
       flex flex-col justify-between
       "
     >
-      <div className="border-t-2 border-dashed border-neutral-0/30 text-neutral-0/50 pt-4">
+      <div className="border-t-2 border-dashed border-neutral-0/30 text-neutral-0/50 pt-4 flex items-start justify-between">
         <span className="uppercase font-mono">Welcome Card</span>
+        <img src={Sun} alt="sun" />
       </div>
       <div className="flex flex-col gap-2">
         <span className="text-3xl italic font-serif">A note from your host,</span>
