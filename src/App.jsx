@@ -34,7 +34,7 @@ function App() {
         </div>
         <div className='bg-neutral-100 px-4 py-2 rounded-xl flex items-center justify-between'>
           <span className='uppercase font-mono tracking-widest text-neutral-600'>Password</span>
-          <span className='flex items-center  gap-2 text-neutral-900'>soleil-2026 <button onClick={() => navigator.clipboard.writeText("soleil-2026")}  className='px-2 rounded-2xl text-sm border-2 border-neutral-400 hover:button-hover'>COPY</button></span>
+          <span className='flex items-center  gap-2 text-neutral-900'>soleil-2026 <button onClick={() => navigator.clipboard.writeText("soleil-2026")}  className='px-2 rounded-2xl text-sm border-2 border-neutral-400 hover:button-hover hover:cursor-pointer focus:bg-neutral-900 focus:font-medium focus:text-neutral-0'>COPY</button></span>
         </div>
       </div>
     },
@@ -61,8 +61,8 @@ function App() {
             <h1 className='text-6xl font-serif text-neutral-900'>Bienvenue, <span className='text-terracotta-600 italic'>Lucia.</span></h1>
           </div>
           <div className='flex gap-4 *:w-full md:*:w-fit'>
-            <button className='button-outline hover:cursor-pointer hover:button-hover'>Print receipt</button>
-            <button className='button-filled whitespace-nowrap hover:cursor-pointer hover:button-hover'>Add to calendar</button>
+            <button className='button-outline hover:cursor-pointer hover:button-hover focus:bg-neutral-900 focus:font-medium focus:text-neutral-0'>Print receipt</button>
+            <button className='button-filled whitespace-nowrap hover:cursor-pointer hover:button-hover focus:bg-neutral-0 focus:font-medium focus:text-neutral-900'>Add to calendar</button>
           </div>
         </div>
         <div className='h-300 lg:h-145 mt-8 group relative max-w-4xl mx-auto items-center justify-center flex flex-col lg:flex-row'>
