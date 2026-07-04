@@ -150,68 +150,38 @@
 }
 
 @utility button-filled {
-  @apply bg-neutral-900 px-3 py-2 rounded-3xl font-medium text-neutral-0 text-center;
+  @apply bg-neutral-900 px-4 py-2 rounded-full font-medium text-neutral-0 text-center;
 }
 
 @utility button-outline {
-  @apply bg-transparent border border-neutral-400 px-3 py-2 rounded-3xl font-medium text-neutral-900 text-center;
+  @apply bg-transparent border border-neutral-400 px-4 py-2 rounded-full font-medium text-neutral-900 text-center;
 }
 
-/* @utility text-preset-1 {
-  @apply font-bold text-5xl tracking-tight;
+@utility button-hover {
+  @apply ring-2 ring-terracotta-700 ring-offset-2 ring-offset-background;
 }
 
-@utility text-preset-1-tab {
-  @apply font-bold text-4xl tracking-tight;
-}
-
-@utility text-preset-2 {
-  @apply text-xl leading-1.5 tracking-tight;
-}
-
-@utility text-preset-3 {
-  @apply text-base leading-1.5 tracking-wide;
-}
-
-@utility text-preset-3-med {
-  @apply font-medium text-base leading-3 tracking-wider;
-}
-
-@utility text-preset-3-bold {
-  @apply font-bold text-base leading-1 tracking-wide;
-}
-
-@utility text-preset-4 {
-  @apply text-sm leading-1 tracking-wide;
-}
-
-@utility text-preset-5 {
-  @apply text-xs leading-1.5 tracking-wide;
-}
-
-@utility text-preset-med {
-  @apply font-medium text-xs leading-1.5 tracking-tight;
-}
-
-@utility text-preset-6 {
-  @apply text-caption leading-0 tracking-normal;
-}
-
-@utility button-outline-gray {
-  @apply bg-transparent border border-neutral-400 p-3 rounded-lg flex items-center justify-between uppercase text-preset-5 font-medium text-neutral-200;
-}
-
-@keyframes marquee {
+@keyframes left {
   from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  to { transform: translateX(-30%); }
 }
 
-@utility animate-marquee {
-  animation: marquee 100s linear infinite;
+@utility animate-left {
+  animation: left 1s linear;
   will-change: transform;
 }
 
-@utility no-spinner {
+@keyframes right {
+  from { transform: translateX(0); }
+  to { transform: translateX(60%); }
+}
+
+@utility animate-right {
+  animation: right 1s linear;
+  will-change: transform;
+}
+
+/* @utility no-spinner {
   -moz-appearance: textfield;
   appearance: textfield;
 

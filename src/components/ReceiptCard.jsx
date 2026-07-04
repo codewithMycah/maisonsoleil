@@ -31,7 +31,20 @@ const ReceiptCard = () => {
   }
 
   return (
-    <div className="mx-auto -rotate-3 min-w-105 h-140 p-8 rounded-4xl bg-neutral-0 shadow-2xl shadow-neutral-400/50 flex flex-col text-neutral-900">
+    <div className="
+      relative lg:absolute lg:left-2
+      lg:z-20
+      transition-transform duration-500
+      lg:group-hover:-translate-x-24
+      lg:group-hover:rotate-3
+      -rotate-3
+      w-full max-w-105 lg:min-w-105
+      h-140 p-8 rounded-4xl
+      bg-neutral-0
+      shadow-2xl shadow-neutral-400/50
+      flex flex-col text-neutral-900
+      "
+    >
       <div className="pb-4 flex items-start justify-between">
         <div className="flex flex-col gap-2 text-neutral-900">
           <span className="uppercase font-mono text-neutral-900/50">Receipt</span>
