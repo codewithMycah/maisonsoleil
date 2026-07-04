@@ -34,7 +34,7 @@ function App() {
         </div>
         <div className='bg-neutral-100 px-4 py-2 rounded-xl flex items-center justify-between'>
           <span className='uppercase font-mono tracking-widest text-neutral-600'>Password</span>
-          <span className='flex items-center  gap-2 text-neutral-900'>soleil-2026 <button className='px-2 rounded-2xl text-sm border-2 border-neutral-400 hover:button-hover'>COPY</button></span>
+          <span className='flex items-center  gap-2 text-neutral-900'>soleil-2026 <button onClick={() => navigator.clipboard.writeText("soleil-2026")}  className='px-2 rounded-2xl text-sm border-2 border-neutral-400 hover:button-hover'>COPY</button></span>
         </div>
       </div>
     },
@@ -67,7 +67,7 @@ function App() {
         </div>
         <div className='h-300 lg:h-145 mt-8 group relative max-w-4xl mx-auto items-center justify-center flex flex-col lg:flex-row'>
           <WelcomeCard />
-          <img src={Sun} alt="Sun" className='hidden: lg:block absolute w-44 h-44 opacity-0 scale-50 transition-all duration-500 group-hover:opacity-100 group-hover:scale-100'/>
+          <img src={Sun} alt="Sun" className='hidden lg:block absolute w-44 h-44 opacity-0 scale-50 transition-all duration-500 group-hover:opacity-100 group-hover:scale-100'/>
           <ReceiptCard />
         </div>
         <div className='hidden uppercase font-mono text-terracotta-500 bottom-0 lg:flex lg:flex-row gap-3 justify-center'>
